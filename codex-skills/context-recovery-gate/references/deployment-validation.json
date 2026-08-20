@@ -1,0 +1,7 @@
+{
+  "schema_version": "1.0",
+  "passed": true,
+  "recovery_self_test_requested": true,
+  "cleanup_passed": true,
+  "findings": []
+}

@@ -1,0 +1,430 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-08-20T14:31:42.9324463+08:00",
+  "passed": true,
+  "environment": {
+    "git": "git version 2.55.0.windows.3",
+    "powershell": "7.6.4",
+    "python": "Python 3.11.15"
+  },
+  "protocol": {
+    "task_id": "recovery-gate-poc-001",
+    "source_commit_then_manifest_commit": true,
+    "annotated_archive_tag": true,
+    "git_required": true,
+    "probe_never_hard_cold": true,
+    "clean_clone_required": true,
+    "website_commit_binding_required": true
+  },
+  "tests": [
+    {
+      "name": "reject_non_git_workspace",
+      "expected_pass": false,
+      "actual_pass": false,
+      "process_exit_code": 2,
+      "required_finding_codes": [
+        "repository_not_git"
+      ],
+      "observed_finding_codes": [
+        "repository_not_git"
+      ],
+      "missing_required_codes": [],
+      "passed": true,
+      "parse_error": ""
+    },
+    {
+      "name": "positive_clean_clone",
+      "expected_pass": true,
+      "actual_pass": true,
+      "process_exit_code": 0,
+      "required_finding_codes": [],
+      "observed_finding_codes": [],
+      "missing_required_codes": [],
+      "passed": true,
+      "parse_error": ""
+    },
+    {
+      "name": "reject_unapproved_http_origin",
+      "expected_pass": false,
+      "actual_pass": false,
+      "process_exit_code": 2,
+      "required_finding_codes": [
+        "http_origin_not_authorized"
+      ],
+      "observed_finding_codes": [
+        "http_origin_not_authorized"
+      ],
+      "missing_required_codes": [],
+      "passed": true,
+      "parse_error": ""
+    },
+    {
+      "name": "reject_unsafe_remote_name",
+      "expected_pass": false,
+      "actual_pass": false,
+      "process_exit_code": 2,
+      "required_finding_codes": [
+        "remote_name_invalid"
+      ],
+      "observed_finding_codes": [
+        "remote_name_invalid",
+        "remote_missing"
+      ],
+      "missing_required_codes": [],
+      "passed": true,
+      "parse_error": ""
+    },
+    {
+      "name": "positive_git_only_chinese_small_text",
+      "expected_pass": true,
+      "actual_pass": true,
+      "process_exit_code": 0,
+      "required_finding_codes": [],
+      "observed_finding_codes": [],
+      "missing_required_codes": [],
+      "passed": true,
+      "parse_error": ""
+    },
+    {
+      "name": "reject_manifest_path_escape",
+      "expected_pass": false,
+      "actual_pass": false,
+      "process_exit_code": 2,
+      "required_finding_codes": [
+        "unsafe_archive_scope_path",
+        "deployment_artifact_path_unsafe"
+      ],
+      "observed_finding_codes": [
+        "unsafe_archive_scope_path",
+        "archive_scope_not_clean",
+        "tracked_output_outside_archive_scope",
+        "deployment_artifact_path_unsafe"
+      ],
+      "missing_required_codes": [],
+      "passed": true,
+      "parse_error": ""
+    },
+    {
+      "name": "reject_windows_unsafe_path",
+      "expected_pass": false,
+      "actual_pass": false,
+      "process_exit_code": 2,
+      "required_finding_codes": [
+        "unsafe_archive_scope_path",
+        "deployment_artifact_path_unsafe"
+      ],
+      "observed_finding_codes": [
+        "unsafe_archive_scope_path",
+        "archive_scope_not_clean",
+        "tracked_output_outside_archive_scope",
+        "deployment_artifact_path_unsafe"
+      ],
+      "missing_required_codes": [],
+      "passed": true,
+      "parse_error": ""
+    },
+    {
+      "name": "reject_manifest_sensitive_value",
+      "expected_pass": false,
+      "actual_pass": false,
+      "process_exit_code": 2,
+      "required_finding_codes": [
+        "manifest_sensitive_value"
+      ],
+      "observed_finding_codes": [
+        "manifest_sensitive_value",
+        "archive_scope_not_clean"
+      ],
+      "missing_required_codes": [],
+      "passed": true,
+      "parse_error": ""
+    },
+    {
+      "name": "reject_invalid_manifest_json",
+      "expected_pass": false,
+      "actual_pass": false,
+      "process_exit_code": 2,
+      "required_finding_codes": [
+        "manifest_invalid_json"
+      ],
+      "observed_finding_codes": [
+        "manifest_invalid_json"
+      ],
+      "missing_required_codes": [],
+      "passed": true,
+      "parse_error": ""
+    },
+    {
+      "name": "reject_manifest_missing_required_object",
+      "expected_pass": false,
+      "actual_pass": false,
+      "process_exit_code": 2,
+      "required_finding_codes": [
+        "manifest_required_field_missing"
+      ],
+      "observed_finding_codes": [
+        "manifest_required_field_missing"
+      ],
+      "missing_required_codes": [],
+      "passed": true,
+      "parse_error": ""
+    },
+    {
+      "name": "reject_oversized_manifest",
+      "expected_pass": false,
+      "actual_pass": false,
+      "process_exit_code": 2,
+      "required_finding_codes": [
+        "manifest_too_large"
+      ],
+      "observed_finding_codes": [
+        "manifest_too_large"
+      ],
+      "missing_required_codes": [],
+      "passed": true,
+      "parse_error": ""
+    },
+    {
+      "name": "reject_restore_command_injection",
+      "expected_pass": false,
+      "actual_pass": false,
+      "process_exit_code": 2,
+      "required_finding_codes": [
+        "restore_command_unsafe"
+      ],
+      "observed_finding_codes": [
+        "archive_scope_not_clean",
+        "restore_command_unsafe"
+      ],
+      "missing_required_codes": [],
+      "passed": true,
+      "parse_error": ""
+    },
+    {
+      "name": "reject_git_clone_execution_option",
+      "expected_pass": false,
+      "actual_pass": false,
+      "process_exit_code": 2,
+      "required_finding_codes": [
+        "restore_command_unsafe"
+      ],
+      "observed_finding_codes": [
+        "archive_scope_not_clean",
+        "restore_command_unsafe"
+      ],
+      "missing_required_codes": [],
+      "passed": true,
+      "parse_error": ""
+    },
+    {
+      "name": "reject_non_release_tracked_output",
+      "expected_pass": false,
+      "actual_pass": false,
+      "process_exit_code": 2,
+      "required_finding_codes": [
+        "tracked_output_not_release"
+      ],
+      "observed_finding_codes": [
+        "archive_scope_not_clean",
+        "tracked_output_not_release"
+      ],
+      "missing_required_codes": [],
+      "passed": true,
+      "parse_error": ""
+    },
+    {
+      "name": "reject_undeclared_archive_file",
+      "expected_pass": false,
+      "actual_pass": false,
+      "process_exit_code": 2,
+      "required_finding_codes": [
+        "archive_file_not_declared"
+      ],
+      "observed_finding_codes": [
+        "archive_scope_not_clean",
+        "archive_file_not_declared"
+      ],
+      "missing_required_codes": [],
+      "passed": true,
+      "parse_error": ""
+    },
+    {
+      "name": "reject_missing_validation_evidence",
+      "expected_pass": false,
+      "actual_pass": false,
+      "process_exit_code": 2,
+      "required_finding_codes": [
+        "validation_evidence_not_in_source"
+      ],
+      "observed_finding_codes": [
+        "archive_scope_not_clean",
+        "validation_evidence_not_in_source"
+      ],
+      "missing_required_codes": [],
+      "passed": true,
+      "parse_error": ""
+    },
+    {
+      "name": "reject_unsafe_remote_helper",
+      "expected_pass": false,
+      "actual_pass": false,
+      "process_exit_code": 2,
+      "required_finding_codes": [
+        "remote_url_unsafe"
+      ],
+      "observed_finding_codes": [
+        "remote_url_unsafe",
+        "archive_scope_not_clean"
+      ],
+      "missing_required_codes": [],
+      "passed": true,
+      "parse_error": ""
+    },
+    {
+      "name": "reject_unreachable_remote",
+      "expected_pass": false,
+      "actual_pass": false,
+      "process_exit_code": 2,
+      "required_finding_codes": [
+        "remote_branch_fetch_failed",
+        "remote_archive_tag_missing"
+      ],
+      "observed_finding_codes": [
+        "remote_branch_fetch_failed",
+        "remote_archive_tag_missing",
+        "archive_scope_not_clean"
+      ],
+      "missing_required_codes": [],
+      "passed": true,
+      "parse_error": ""
+    },
+    {
+      "name": "reject_deployment_reparse_point",
+      "expected_pass": false,
+      "actual_pass": false,
+      "process_exit_code": 2,
+      "required_finding_codes": [
+        "deployment_reparse_point_forbidden"
+      ],
+      "observed_finding_codes": [
+        "archive_scope_not_clean",
+        "deployment_reparse_point_forbidden"
+      ],
+      "missing_required_codes": [],
+      "passed": true,
+      "parse_error": ""
+    },
+    {
+      "name": "reject_probe_hard_cold",
+      "expected_pass": false,
+      "actual_pass": false,
+      "process_exit_code": 2,
+      "required_finding_codes": [
+        "probe_not_hard_cold"
+      ],
+      "observed_finding_codes": [
+        "probe_not_hard_cold",
+        "archive_scope_not_clean"
+      ],
+      "missing_required_codes": [],
+      "passed": true,
+      "parse_error": ""
+    },
+    {
+      "name": "reject_lightweight_archive_tag",
+      "expected_pass": false,
+      "actual_pass": false,
+      "process_exit_code": 2,
+      "required_finding_codes": [
+        "archive_tag_not_annotated"
+      ],
+      "observed_finding_codes": [
+        "archive_tag_not_annotated",
+        "remote_archive_tag_mismatch"
+      ],
+      "missing_required_codes": [],
+      "passed": true,
+      "parse_error": ""
+    },
+    {
+      "name": "reject_tampered_tracked_source",
+      "expected_pass": false,
+      "actual_pass": false,
+      "process_exit_code": 2,
+      "required_finding_codes": [
+        "archive_scope_not_clean"
+      ],
+      "observed_finding_codes": [
+        "archive_scope_not_clean"
+      ],
+      "missing_required_codes": [],
+      "passed": true,
+      "parse_error": ""
+    },
+    {
+      "name": "reject_untracked_scope_file",
+      "expected_pass": false,
+      "actual_pass": false,
+      "process_exit_code": 2,
+      "required_finding_codes": [
+        "archive_scope_not_clean"
+      ],
+      "observed_finding_codes": [
+        "archive_scope_not_clean"
+      ],
+      "missing_required_codes": [],
+      "passed": true,
+      "parse_error": ""
+    },
+    {
+      "name": "reject_remote_without_archive_tag",
+      "expected_pass": false,
+      "actual_pass": false,
+      "process_exit_code": 2,
+      "required_finding_codes": [
+        "remote_archive_tag_missing"
+      ],
+      "observed_finding_codes": [
+        "repository_url_mismatch",
+        "remote_archive_tag_missing"
+      ],
+      "missing_required_codes": [],
+      "passed": true,
+      "parse_error": ""
+    },
+    {
+      "name": "reject_deployment_commit_mismatch",
+      "expected_pass": false,
+      "actual_pass": false,
+      "process_exit_code": 2,
+      "required_finding_codes": [
+        "deployment_source_mismatch",
+        "deployment_artifact_hash_mismatch"
+      ],
+      "observed_finding_codes": [
+        "deployment_source_mismatch",
+        "deployment_artifact_hash_mismatch",
+        "http_deployment_version_mismatch"
+      ],
+      "missing_required_codes": [],
+      "passed": true,
+      "parse_error": ""
+    },
+    {
+      "name": "positive_after_fault_repair",
+      "expected_pass": true,
+      "actual_pass": true,
+      "process_exit_code": 0,
+      "required_finding_codes": [],
+      "observed_finding_codes": [],
+      "missing_required_codes": [],
+      "passed": true,
+      "parse_error": ""
+    }
+  ],
+  "cleanup": {
+    "passed": true,
+    "runtime_residue_count": 0
+  },
+  "fatal_error": ""
+}

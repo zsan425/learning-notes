@@ -1,0 +1,91 @@
+{
+  "schema_version": "1.0",
+  "skill": "context-recovery-gate",
+  "version": "1.0.0",
+  "files": [
+    {
+      "path": ".gitattributes",
+      "sha256": "a79691a93b46e49ce460c26ef22afcc03d6eca1e63bf2edbc20e96159510f6c9"
+    },
+    {
+      "path": "scripts/Test-RecoveryGate.ps1",
+      "sha256": "905feb8c82e9f1d3e3ae39b90c52be741d452abfec70acb80902e08b31dfeae1"
+    },
+    {
+      "path": "scripts/Test-PackageIntegrity.ps1",
+      "sha256": "75dc29c294d814962607db07331f07edb69284ee3ebfddaef8b891f5b85411c2"
+    },
+    {
+      "path": "scripts/Invoke-RecoveryGateSelfTest.ps1",
+      "sha256": "6cc9c3ea82338286b98b0adc1fe9149bb0e1f0375a35e24309575a1d0ed8290d"
+    },
+    {
+      "path": "scripts/Invoke-DeploymentSelfTest.ps1",
+      "sha256": "f85b5208ba003ca34c9dcb39e0f03d36ac2670b86a7375d0cd2b38b84eab7de9"
+    },
+    {
+      "path": "scripts/Install-Skill.ps1",
+      "sha256": "dec342a575cd97d565e0c7db4950e19721128736bdf036df354f76207fd4d9fa"
+    },
+    {
+      "path": "references/validation-summary.md",
+      "sha256": "1ff3b007c5991a2da217b967349b84e8b07e53e69fe9b661c538da1cc5829913"
+    },
+    {
+      "path": "references/recovery-gate-validation.json",
+      "sha256": "e0e25a4c3647be05e9e890c39b3e7d658069471cc64f04bcdde72fe4266ce494"
+    },
+    {
+      "path": "references/policy.md",
+      "sha256": "c822cc45411b2f8d80856641af54a53ce6eec5f08da1f38230c05dac4fd32bb2"
+    },
+    {
+      "path": "scripts/Uninstall-Skill.ps1",
+      "sha256": "bb7c25ffc25fcd2847a01c165cf456383b4f76bd47a9eace1d17c4e5018165d0"
+    },
+    {
+      "path": "references/manifest-schema.md",
+      "sha256": "c7adeb98ea3494db04e136422520ca19875dacc795e19b53a9c5f4f961382de8"
+    },
+    {
+      "path": "assets/self-test/skill-output/RESULT.md",
+      "sha256": "aa029b9a9646a80ccc169153257e3546d173d6375fada3c570b20bec2d7958c6"
+    },
+    {
+      "path": "assets/self-test/site-src/index.html",
+      "sha256": "f67db9bda4194e07221dd0af43e7a6eccbf24e126b08683e595f4375370faf12"
+    },
+    {
+      "path": "assets/self-test/notes/通用 工作记录.md",
+      "sha256": "c83f85cfe8a9ec1a7d4a12f7bcdac4bdc08e9bfd6531c296e5f22fe48a15b4c6"
+    },
+    {
+      "path": "assets/self-test/build-site.ps1",
+      "sha256": "678e8de7c295f046b4a9d628f72507776fc381a31502818f97baeaf07eead1e5"
+    },
+    {
+      "path": "assets/recovery-manifest.template.json",
+      "sha256": "88dab7f3d16c3b11f6951c88e42489d6df5f7a3227c26ef4b642f1a568eb69ec"
+    },
+    {
+      "path": "agents/openai.yaml",
+      "sha256": "93f0ef5790f96cc8c859cc04c5bfd78973d02b70d34839cdddffae079d5c35e3"
+    },
+    {
+      "path": "SKILL.md",
+      "sha256": "5c3a68c08f59ede08e964103cd7f59d41609496c1c0e2c7c8cd555ea73277095"
+    },
+    {
+      "path": "DEPLOY.md",
+      "sha256": "6c20da3323c1ea092b55a3cd03692c30e553f793c95d7272b5cac28c2315c0c1"
+    },
+    {
+      "path": "references/deployment-validation.json",
+      "sha256": "819cb18339017256577eba1cd5b7fd2cf6c83e4b63e0593d2f4352e924b2aca3"
+    },
+    {
+      "path": "scripts/Update-PackageManifest.ps1",
+      "sha256": "967ee76e0d782c3083c3bcc151fb7112f6e65fa57d0a10f6b2610cd5b32f07c5"
+    }
+  ]
+}

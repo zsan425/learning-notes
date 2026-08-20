@@ -1,0 +1,4 @@
+interface:
+  display_name: "Context Recovery Gate"
+  short_description: "Safely archive and restore completed Git-backed tasks"
+  default_prompt: "Use $context-recovery-gate to verify whether this completed task can be safely compressed and restored."

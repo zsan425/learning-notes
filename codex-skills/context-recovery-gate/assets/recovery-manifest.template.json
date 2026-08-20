@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0",
+  "task_id": "replace-me",
+  "type": "release",
+  "state": "ready_for_hard_cold",
+  "persistence_profile": "git_and_deployment",
+  "repository_url": "replace-with-authorized-remote",
+  "branch": "main",
+  "source_commit": "40-character-commit-id",
+  "manifest_ref": "archive/replace-me",
+  "archive_scope_paths": [
+    "site-src",
+    "skill-output",
+    "notes",
+    "tools/build-site.ps1",
+    "recovery/recovery-manifest.json"
+  ],
+  "tracked_outputs": [
+    {
+      "path": "site-src/index.html",
+      "git_object": "git-object-id-at-source-commit",
+      "type": "release",
+      "stage": "validated"
+    },
+    {
+      "path": "notes/通用 工作记录.md",
+      "git_object": "git-object-id-at-source-commit",
+      "type": "release",
+      "stage": "validated"
+    }
+  ],
+  "deployment": {
+    "url": "https://replace-me.example/",
+    "version_url": "https://replace-me.example/version.json",
+    "deployment_id": "immutable-deployment-id",
+    "source_commit": "40-character-commit-id",
+    "artifacts": [
+      {
+        "path": "index.html",
+        "sha256": "64-character-sha256"
+      }
+    ]
+  },
+  "validation": {
+    "status": "passed",
+    "evidence": [
+      "replace-with-tracked-or-authorized-evidence-reference"
+    ]
+  },
+  "known_limits": [
+    "replace-with-real-limit"
+  ],
+  "must_not_claim": [
+    "replace-with-prohibited-claim"
+  ],
+  "restore_commands": [
+    "git clone https://example.invalid/owner/repository.git restore-copy",
+    "git -C restore-copy fetch --tags",
+    "git -C restore-copy checkout archive/replace-me"
+  ]
+}
